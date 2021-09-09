@@ -10,7 +10,7 @@ namespace Lecture01.Tests
         [Fact]
         public void isLeapYear_testsDivisableBy4ReturnsTrue()
         {
-            var yearInput = 4;
+            var yearInput = 2004;
 
             var expected = true;
             var actual = Program.isLeapYear(yearInput);
@@ -21,7 +21,7 @@ namespace Lecture01.Tests
         [Fact]
         public void isLeapYear_testsDivisableBy100ReturnsFalse()
         {
-            var yearInput = 100;
+            var yearInput = 2100;
 
             var expected = false;
             var actual = Program.isLeapYear(yearInput);
@@ -31,7 +31,7 @@ namespace Lecture01.Tests
 
         [Fact]
         public void isLeapYear_testsDivivableBy400ReturnsTrue(){
-            var yearInput = 400;
+            var yearInput = 2400;
             
             var expected = true;
             var actual = Program.isLeapYear(yearInput);
@@ -42,7 +42,7 @@ namespace Lecture01.Tests
         [Fact]
         public void isLeapYear_testsDivisableBy4ReturnsFalse()
         {
-            var yearInput = 66;
+            var yearInput = 2135;
 
             var expected = false;
             var actual = Program.isLeapYear(yearInput);
