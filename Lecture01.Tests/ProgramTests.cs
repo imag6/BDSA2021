@@ -6,16 +6,60 @@ namespace Lecture01.Tests
 {
     public class ProgramTests
     {
+
         [Fact]
-        public void Main_prints_Hello_World()
+        public void isLeapYear_testsDivisableBy4ReturnsTrue()
         {
-            var writer = new StringWriter();
-            Console.SetOut(writer);
+            var yearInput = 4;
 
-            Program.Main(new string[0]);
+            var expected = true;
+            var actual = Program.isLeapYear(yearInput);
 
-            var output = writer.GetStringBuilder().ToString().Trim();
-            Assert.Equal("Hello World!", output);
+            Assert.Equal(expected, actual);
         }
+
+        [Fact]
+        public void isLeapYear_testsDivisableBy100ReturnsFalse()
+        {
+            var yearInput = 100;
+
+            var expected = false;
+            var actual = Program.isLeapYear(yearInput);
+
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void isLeapYear_testsDivivableBy400ReturnsTrue(){
+            var yearInput = 400;
+            
+            var expected = true;
+            var actual = Program.isLeapYear(yearInput);
+
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void isLeapYear_testsDivisableBy4ReturnsFalse()
+        {
+            var yearInput = 66;
+
+            var expected = false;
+            var actual = Program.isLeapYear(yearInput);
+
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void isLeapYear_testsDivisableBy100ReturnsFalse2()
+        {
+            var yearInput = 30200;
+
+            var expected = false;
+            var actual = Program.isLeapYear(yearInput);
+
+            Assert.Equal(expected, actual);
+        }
+
     }
 }
